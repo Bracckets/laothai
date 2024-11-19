@@ -22,25 +22,25 @@ export function Notifications(): React.JSX.Element {
       }}
     >
       <Card>
-        <CardHeader subheader="Manage the notifications" title="Notifications" />
         <Divider />
         <CardContent>
           <Grid container spacing={6} wrap="wrap">
             <Grid md={4} sm={6} xs={12}>
               <Stack spacing={1}>
-                <Typography variant="h6">Email</Typography>
+                <Typography variant="h6">تفعيل المخالفة</Typography>
                 <FormGroup>
-                  <FormControlLabel control={<Checkbox defaultChecked />} label="Product updates" />
-                  <FormControlLabel control={<Checkbox />} label="Security updates" />
+                  <FormControlLabel control={<Checkbox />} label="خوذة" />
+                  <FormControlLabel control={<Checkbox />} label="قناع" />
+                  <FormControlLabel control={<Checkbox />} label="سترة" />
                 </FormGroup>
               </Stack>
             </Grid>
             <Grid md={4} sm={6} xs={12}>
               <Stack spacing={1}>
-                <Typography variant="h6">Phone</Typography>
+                <Typography variant="h6">تفعيل الامان</Typography>
                 <FormGroup>
-                  <FormControlLabel control={<Checkbox defaultChecked />} label="Email" />
-                  <FormControlLabel control={<Checkbox />} label="Security updates" />
+                  <FormControlLabel control={<Checkbox />} label="رصد الحرائق" />
+                  <FormControlLabel control={<Checkbox />} label="رصد الادخنة" />
                 </FormGroup>
               </Stack>
             </Grid>
@@ -48,7 +48,7 @@ export function Notifications(): React.JSX.Element {
         </CardContent>
         <Divider />
         <CardActions sx={{ justifyContent: 'flex-end' }}>
-          <Button variant="contained">Save changes</Button>
+          <Button variant="contained">حفظ التغيير</Button>
         </CardActions>
       </Card>
     </form>

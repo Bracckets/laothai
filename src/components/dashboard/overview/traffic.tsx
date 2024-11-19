@@ -9,12 +9,9 @@ import { useTheme } from '@mui/material/styles';
 import type { SxProps } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import type { Icon } from '@phosphor-icons/react/dist/lib/types';
-import { Desktop as DesktopIcon } from '@phosphor-icons/react/dist/ssr/Desktop';
 import { FaceMask as FaceMaskIcon } from '@phosphor-icons/react/dist/ssr/FaceMask';
 import { HardHat as HardHatIcon } from '@phosphor-icons/react/dist/ssr/HardHat';
 import { ShirtFolded as ShirtFoldedIcon } from '@phosphor-icons/react/dist/ssr/ShirtFolded';
-import { DeviceTablet as DeviceTabletIcon } from '@phosphor-icons/react/dist/ssr/DeviceTablet';
-import { Phone as PhoneIcon } from '@phosphor-icons/react/dist/ssr/Phone';
 import type { ApexOptions } from 'apexcharts';
 
 import { Chart } from '@/components/core/chart';
