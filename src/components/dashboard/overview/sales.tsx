@@ -26,7 +26,7 @@ export function Sales({ chartSeries, sx }: SalesProps): React.JSX.Element {
   return (
     <Card sx={sx}>
       <CardHeader
-        title="Number of Violations"
+        title="عدد المخالفات"
       />
       <CardContent>
         <Chart height={350} options={chartOptions} series={chartSeries} type="bar" width="100%" />
@@ -57,7 +57,7 @@ function useChartOptions(): ApexOptions {
     xaxis: {
       axisBorder: { color: theme.palette.divider, show: true },
       axisTicks: { color: theme.palette.divider, show: true },
-      categories: ['Thur', 'Fri', 'Sat', 'Sun', 'Mon', 'Tues', 'Wed'],
+      categories: ['الأربعاء', 'الثلاثاء', 'الاثنين', 'الأحد', 'السبت', 'الجمعة', 'الخميس'],
       labels: { offsetY: 5, style: { colors: theme.palette.text.secondary } },
     },
     yaxis: {
