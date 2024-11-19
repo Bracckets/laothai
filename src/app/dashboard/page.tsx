@@ -19,21 +19,21 @@ export default function Page(): React.JSX.Element {
   return (
     <Grid container spacing={4}>
       <Grid lg={3} sm={6} xs={12}>
-        <Budget diff={12} trend="up" sx={{ height: '100%' }} value="119" />
+        <Budget diff={12} trend="up" sx={{ height: '100%' }} value="18" />
       </Grid>
       <Grid lg={3} sm={6} xs={12}>
-        <TotalCustomers diff={16} trend="down" sx={{ height: '100%' }} value="59" />
+        <TotalCustomers diff={16} trend="down" sx={{ height: '100%' }} value="9" />
       </Grid>
       <Grid lg={3} sm={6} xs={12}>
-        <TasksProgress diff={5} trend="up" sx={{ height: '100%' }} value="120" />
+        <TasksProgress diff={5} trend="up" sx={{ height: '100%' }} value="5" />
       </Grid>
       <Grid lg={3} sm={6} xs={12}>
-        <TotalProfit diff={10} trend="down" sx={{ height: '100%' }} value="120" />
+        <TotalProfit diff={10} trend="down" sx={{ height: '100%' }} value="4" />
       </Grid>
       <Grid lg={8} xs={12}>
         <Sales
           chartSeries={[
-            { name: 'هذا الاسبوع', data: [18, 16, 5, 8, 3, 14, 14] }
+            { name: 'هذا الاسبوع', data: [18, 16, 5, 8, 3, 14, 18] }
           ]}
           sx={{ height: '100%' }}
         />
