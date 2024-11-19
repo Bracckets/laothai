@@ -5,27 +5,48 @@ import CardContent from '@mui/material/CardContent';
 import Stack from '@mui/material/Stack';
 import type { SxProps } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
-import { Receipt as ReceiptIcon } from '@phosphor-icons/react/dist/ssr/Receipt';
+import { HardHat as HardHatIcon } from '@phosphor-icons/react/dist/ssr/HardHat';
+import { ArrowDown as ArrowDownIcon } from '@phosphor-icons/react/dist/ssr/ArrowDown';
+import { ArrowUp as ArrowUpIcon } from '@phosphor-icons/react/dist/ssr/ArrowUp';
 
 export interface TotalProfitProps {
+  diff?: number;
+  trend: 'up' | 'down';
   sx?: SxProps;
   value: string;
 }
 
-export function TotalProfit({ value, sx }: TotalProfitProps): React.JSX.Element {
+export function TotalProfit({ diff, trend, sx, value }: TotalProfitProps): React.JSX.Element {
+  const TrendIcon = trend === 'up' ? ArrowUpIcon : ArrowDownIcon;
+  const trendColor = trend === 'up' ? 'var(--mui-palette-error-main)' : 'var(--mui-palette-success-main)';
   return (
     <Card sx={sx}>
       <CardContent>
-        <Stack direction="row" sx={{ alignItems: 'flex-start', justifyContent: 'space-between' }} spacing={3}>
-          <Stack spacing={1}>
-            <Typography color="text.secondary" variant="overline">
-              Total Profit
-            </Typography>
-            <Typography variant="h4">{value}</Typography>
+        <Stack spacing={2}>
+          <Stack direction="row" sx={{ alignItems: 'flex-start', justifyContent: 'space-between' }} spacing={3}>
+            <Stack spacing={1}>
+              <Typography color="text.secondary" variant="overline">
+                مخالفات الخوذة
+              </Typography>
+              <Typography variant="h4">{value}</Typography>
+            </Stack>
+            <Avatar sx={{ backgroundColor: 'var(--mui-palette-primary-main)', height: '56px', width: '56px' }}>
+              <HardHatIcon fontSize="var(--icon-fontSize-lg)" />
+            </Avatar>
           </Stack>
-          <Avatar sx={{ backgroundColor: 'var(--mui-palette-primary-main)', height: '56px', width: '56px' }}>
-            <ReceiptIcon fontSize="var(--icon-fontSize-lg)" />
-          </Avatar>
+          {diff ? (
+            <Stack sx={{ alignItems: 'center' }} direction="row" spacing={2}>
+              <Stack sx={{ alignItems: 'center' }} direction="row" spacing={0.5}>
+                <TrendIcon color={trendColor} fontSize="var(--icon-fontSize-md)" />
+                <Typography color={trendColor} variant="body2">
+                  {diff}%
+                </Typography>
+              </Stack>
+              <Typography color="text.secondary" variant="caption">
+              مقارنة بالأمس
+              </Typography>
+            </Stack>
+          ) : null}
         </Stack>
       </CardContent>
     </Card>

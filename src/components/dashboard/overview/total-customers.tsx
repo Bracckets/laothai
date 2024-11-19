@@ -7,7 +7,7 @@ import type { SxProps } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import { ArrowDown as ArrowDownIcon } from '@phosphor-icons/react/dist/ssr/ArrowDown';
 import { ArrowUp as ArrowUpIcon } from '@phosphor-icons/react/dist/ssr/ArrowUp';
-import { Users as UsersIcon } from '@phosphor-icons/react/dist/ssr/Users';
+import { ShirtFolded as ShirtFoldedIcon } from '@phosphor-icons/react/dist/ssr/ShirtFolded';
 
 export interface TotalCustomersProps {
   diff?: number;
@@ -18,7 +18,7 @@ export interface TotalCustomersProps {
 
 export function TotalCustomers({ diff, trend, sx, value }: TotalCustomersProps): React.JSX.Element {
   const TrendIcon = trend === 'up' ? ArrowUpIcon : ArrowDownIcon;
-  const trendColor = trend === 'up' ? 'var(--mui-palette-success-main)' : 'var(--mui-palette-error-main)';
+  const trendColor = trend === 'up' ? 'var(--mui-palette-error-main)' : 'var(--mui-palette-success-main)';
 
   return (
     <Card sx={sx}>
@@ -27,12 +27,12 @@ export function TotalCustomers({ diff, trend, sx, value }: TotalCustomersProps):
           <Stack direction="row" sx={{ alignItems: 'flex-start', justifyContent: 'space-between' }} spacing={3}>
             <Stack spacing={1}>
               <Typography color="text.secondary" variant="overline">
-                Total Customers
+                مخالفات السترة
               </Typography>
               <Typography variant="h4">{value}</Typography>
             </Stack>
             <Avatar sx={{ backgroundColor: 'var(--mui-palette-success-main)', height: '56px', width: '56px' }}>
-              <UsersIcon fontSize="var(--icon-fontSize-lg)" />
+              <ShirtFoldedIcon fontSize="var(--icon-fontSize-lg)" />
             </Avatar>
           </Stack>
           {diff ? (
@@ -44,7 +44,7 @@ export function TotalCustomers({ diff, trend, sx, value }: TotalCustomersProps):
                 </Typography>
               </Stack>
               <Typography color="text.secondary" variant="caption">
-                Since last month
+              مقارنة بالأمس
               </Typography>
             </Stack>
           ) : null}

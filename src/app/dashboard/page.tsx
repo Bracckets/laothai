@@ -17,18 +17,18 @@ export const metadata = { title: `Overview | Dashboard | ${config.site.name}` } 
 
 export default function Page(): React.JSX.Element {
   return (
-    <Grid container spacing={3}>
+    <Grid container spacing={4}>
       <Grid lg={3} sm={6} xs={12}>
-        <Budget diff={12} trend="up" sx={{ height: '100%' }} value="$24k" />
+        <Budget diff={12} trend="up" sx={{ height: '100%' }} value="119" />
       </Grid>
       <Grid lg={3} sm={6} xs={12}>
-        <TotalCustomers diff={16} trend="down" sx={{ height: '100%' }} value="1.6k" />
+        <TotalCustomers diff={16} trend="down" sx={{ height: '100%' }} value="59" />
       </Grid>
       <Grid lg={3} sm={6} xs={12}>
-        <TasksProgress sx={{ height: '100%' }} value={75.5} />
+        <TasksProgress diff={5} trend="up" sx={{ height: '100%' }} value="120" />
       </Grid>
       <Grid lg={3} sm={6} xs={12}>
-        <TotalProfit sx={{ height: '100%' }} value="$15k" />
+        <TotalProfit diff={10} trend="down" sx={{ height: '100%' }} value="120" />
       </Grid>
       <Grid lg={8} xs={12}>
         <Sales
